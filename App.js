@@ -1,12 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, ImageBackground } from 'react-native';
+
+const imgLocal = require ('./assets/psg.png')
 
 export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.formContainer}>
         <Text style={styles.title}>Formulario de inicio de sesión</Text>
-
+        <ImageBackground
+        source={imgLocal}
+        resizeMode='cover'
+        style={styles.ImageBackground}>
+       </ImageBackground>
         <TextInput
           style={styles.input}
           placeholder="Ingrese el correo electrónico"
@@ -72,4 +78,9 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
+  ImageBackground: {
+    width: 300,
+    height: 300
+  }
+
 });
