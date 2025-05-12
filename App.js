@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, ImageBackground, Alert } from 'react-native';
 
 const imgLocal = require ('./assets/psg.png')
 
@@ -24,11 +24,14 @@ export default function App() {
           secureTextEntry={true}
         />
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button}
+        onPress= {() => Alert.alert ('Registro exitoso!!!!!!!!!! buena polshu')}>
           <Text style={styles.buttonText}>Iniciar sesión</Text>
+          
         </TouchableOpacity>
       </View>
       <StatusBar style="auto" />
+      
     </View>
   );
 }
